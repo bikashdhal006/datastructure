@@ -82,7 +82,7 @@ public class AddElementsToLl {
 	private void  printMiddleOfLl() {
 		 AddElementsToLl fast =head;
 		 AddElementsToLl slow =head;	
-		while(slow!=null && fast.nextnode!=null) {
+		while(fast!=null && fast.nextnode!=null) {
 			slow = slow.nextnode;
 			fast=fast.nextnode.nextnode;
 		}
@@ -103,15 +103,17 @@ public class AddElementsToLl {
 	
 	public static void main(String [] args) {
 		AddElementsToLl a =new  AddElementsToLl();
-		a.add(3);
-		a.add(5);
-		a.add(8);
 		a.add(10);
+		a.add(20);
+		a.add(30);
+		a.add(40);
+		a.add(50);
+		a.add(60);
 		
 		//a.addFirst(55);
 		
-		a.addInMiddle(45,3);
-		a.print();
+		//a.addInMiddle(45,3);
+		a.printMiddleOfLl();
 		//Print Middle Of LL
 		//a.printMiddleOfLl();
 		
