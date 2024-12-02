@@ -15,6 +15,7 @@ public class IssueInBracket {
 		
 		for(int i=0;i<s.length();i++)
 		{
+			last_isse = i;
 			String ori = String.valueOf(s.charAt(i));
 			String rev =getReverseBracket(ori);
 			
@@ -24,13 +25,15 @@ public class IssueInBracket {
 			else if(br.isEmpty() || !br.pop().equals(rev)) {
 				ret = false;
 				
-				System.out.println("Issue In Index : "+i);
+				//System.out.println("Issue In Index : "+i);
+				
+				break;
 			}
 			
-			last_isse = i;
+			
 		}
 		if(!br.isEmpty()) {
-			last_isse+=1;
+			//last_isse+=1;
 			System.out.println("Issue In Index : "+last_isse);
 		}
 		return br.isEmpty();
@@ -81,7 +84,7 @@ public class IssueInBracket {
 	 
 	public static void main(String [] args) {
 		IssueInBracket in =new IssueInBracket();
-		System.out.println(in.checkBracket("{[]}{}"));;
+		System.out.println(in.checkBracket("{([]){"));;
 	}
 
 }
