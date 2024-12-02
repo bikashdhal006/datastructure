@@ -33,14 +33,30 @@ public class EqaulTree {
 	
 	public static void main(String args[]) {
 		EqaulTree a = new EqaulTree() ;
+		
+		// Representation of input binary tree 1
+        //        10
+        //       / \
+        //      3   2
+        //     /
+		//    14
+        
 		Node n1 = new Node(10); 
 		n1.right = new Node(2);
 		n1.left = new Node(3);
+		n1.left.left= new Node(14);
 		
+		// Representation of input binary tree 2
+        //        10
+        //       / \
+        //      3   2
+        //     /
+		//    14
+        
 		Node n2 = new Node(10); 
 		n2.right = new Node(2);
 		n2.left = new Node(3);
-		
+		n2.left.left= new Node(14);
 		
 		System.out.println(a.checkEqual(n1, n2));
 	}
