@@ -7,8 +7,9 @@ public class LargestSubArray {
 		int lastElem= 0;
 		int k= 2;//Size of the window to slide
 		for(int i=0;i<arr.length;i++) {
+			//lastElem= arr[i];
+			maxSum  = Math.max(maxSum, arr[i]+lastElem);
 			lastElem= arr[i];
-			
 		}
 	}
 	public static void main (String[] args) {
