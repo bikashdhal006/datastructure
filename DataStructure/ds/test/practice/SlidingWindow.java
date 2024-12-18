@@ -8,7 +8,7 @@ import java.util.List;
 public class SlidingWindow {
 	
 	
-	private void maxSubArray(int[] arr,int sum) {
+	private void maxSubArray(int[] arr) {
 		int windowSum=0;
 		int maxSum=0;
 		int k= 4;//Size of the window to slide
@@ -27,6 +27,6 @@ public class SlidingWindow {
 		SlidingWindow x =new SlidingWindow();
 		int arr[] = { 1, 4, 2, 10, 2, 3, 1, 0, 20}; //17
 		int sum = 11;
-		x.maxSubArray(arr, sum);
+		x.maxSubArray(arr);
 	}
 }

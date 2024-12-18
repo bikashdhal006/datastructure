@@ -3,9 +3,9 @@ package practice;
 public class QuickSort {
 	
 	private static int  partition(int arr[],int max,int min) {
-		int i =-1;
+		int i =min-1;
 		int pivot = arr[max];
-		for(int j=0;j<max;j++) {
+		for(int j=min;j<max;j++) {
 			if(pivot>arr[j]) {
 				i++;
 				arr=swap(arr,i,j);
@@ -35,7 +35,7 @@ public class QuickSort {
 		// TODO Auto-generated method stub
 			
 		QuickSort a = new QuickSort();
-		 int[] arr = {5, 3, 8, 4,1, 2, 7, 1, 10,6};
+		 int[] arr = {0 ,1, 2, 0, 1, 2};
 		 int max = arr.length-1;
 		 
 		arr= a.quickSort(arr,max,0);
