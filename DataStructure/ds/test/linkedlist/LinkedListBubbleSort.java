@@ -20,20 +20,16 @@ public class LinkedListBubbleSort {
 
 	public LinkedListBubbleSort sort(LinkedListBubbleSort node) {
 		
+		
 		while(node.head!=null) {
-			while(node.head.next!=null) {
-				if(node.head.data<node.head.next.data) {
-					int tempdata =node.head.data;
-					node.head.data=node.head.next.data;
-					node.head.next.data=tempdata;
-				}
-				 
-				node.head.next = node.head.next.next;	
+			if(node.head.data>node.head.next.data) {
+				LinkedListBubbleSort temp=node.head.next;
+				node.head.next = node.head;
+				node.head = temp;	
 			}
-			node.head = node.head.next;
 		}
 		
-		return node;
+		return node.head;
 	}
 	
 	public LinkedListBubbleSort add(LinkedListBubbleSort node,int data) {
@@ -59,13 +55,14 @@ public class LinkedListBubbleSort {
 
 	public static void main(String [] args) {
 		LinkedListBubbleSort a =new  LinkedListBubbleSort();
-		a=a.add(a,10);
-		a=a.add(a,889);
-		a=a.add(a,7867);
+		a=a.add(a,12312);
+		a=a.add(a,3434);
+		a=a.add(a,1);
 		
 		//a.addFirst(55);
 		
 		//a.addInMiddle(45,3);
+		//a.print(a);
 		a=a.sort(a);
 		a.print(a);
 		//Print Middle Of LL

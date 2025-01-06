@@ -58,27 +58,29 @@ public class FinalPriceDiscount {
 			if(!s.isEmpty()) {
 				int elem = s.pop();
 				while(next<elem) {
-					arr[x] = elem-next;
-					x++;
+					System.out.println(elem+"-------"+next);
+				//	arr[x] = elem-next;
+					//x++;
 					if(s.isEmpty()) 
 						break;
 					elem = s.pop();	
 				}
-				if(elem<next) {
+				if(next>elem) {
+					
 					s.push(elem);
 				}
 			}
 			s.push(next);
 		}
-		
+		x = arr.length-1;
 		while(!s.isEmpty()) {
 			arr[x]= s.pop();
-			x++;
+			x--;
 		}
 		return  arr;
 	}
 	public static void main(String[] args) {
-		int[] arr= {10,1,1,6};
+		int[] arr= {8,4,6,2,3};
 		FinalPriceDiscount f =new FinalPriceDiscount();
 		int[] ret = f.nextSmallerElement( arr);
 		System.out.println(ret);
